@@ -1,0 +1,31 @@
+a = 10;
+b = 5;
+
+# Suma y resta
+suma = a + b;
+resta = a - b;
+
+multiplicacion = a * b;
+division = a / b;
+
+modulo = a % b;
+potencia = a ^ b;
+
+angulo = 45;
+radianes = angulo * (3.1416 / 180);
+seno = sin(radianes);
+coseno = cos(radianes);
+tangente = tan(radianes);
+
+raiz = sqrt(a);
+
+print(suma);
+print(resta);
+print(multiplicacion);
+print(division);
+print(modulo);
+print(potencia);
+print(seno);
+print(coseno);
+print(tangente);
+print(raiz);

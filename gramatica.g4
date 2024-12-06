@@ -23,6 +23,7 @@ statement
     | regression
     | classification
     | clustering
+    | printStatement
     | ';'
     ;
 
@@ -67,14 +68,22 @@ clustering
     : 'clustering' '(' parameters? ')' ';'
     ;
 
+printStatement
+    : 'print' '(' arguments? ')' ';'
+    ;
+
 expression
-    : expression op=('*' | '/' | '%') expression
-    | expression op=('+' | '-') expression
-    | '(' expression ')'
-    | functionCall
-    | matrixOperation
-    | NUMBER
-    | ID
+    : expression '^' expression    # Exponentiation
+    | expression '*' expression    # Multiplicative
+    | expression '/' expression    # Divisional
+    | expression '%' expression    # Modulo
+    | expression '+' expression    # Additive
+    | expression '-' expression    # Subtractive
+    | '(' expression ')'           # Parentheses
+    | functionCall                 # FunctionCallExpr
+    | matrixOperation              # MatrixOperationExpr
+    | NUMBER                       # NumberExpr
+    | ID                           # IdExpr
     ;
 
 functionCall

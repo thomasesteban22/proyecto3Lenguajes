@@ -119,12 +119,111 @@ class gramaticaListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by gramaticaParser#expression.
-    def enterExpression(self, ctx:gramaticaParser.ExpressionContext):
+    # Enter a parse tree produced by gramaticaParser#printStatement.
+    def enterPrintStatement(self, ctx:gramaticaParser.PrintStatementContext):
         pass
 
-    # Exit a parse tree produced by gramaticaParser#expression.
-    def exitExpression(self, ctx:gramaticaParser.ExpressionContext):
+    # Exit a parse tree produced by gramaticaParser#printStatement.
+    def exitPrintStatement(self, ctx:gramaticaParser.PrintStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#Multiplicative.
+    def enterMultiplicative(self, ctx:gramaticaParser.MultiplicativeContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#Multiplicative.
+    def exitMultiplicative(self, ctx:gramaticaParser.MultiplicativeContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#Additive.
+    def enterAdditive(self, ctx:gramaticaParser.AdditiveContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#Additive.
+    def exitAdditive(self, ctx:gramaticaParser.AdditiveContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#FunctionCallExpr.
+    def enterFunctionCallExpr(self, ctx:gramaticaParser.FunctionCallExprContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#FunctionCallExpr.
+    def exitFunctionCallExpr(self, ctx:gramaticaParser.FunctionCallExprContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#Subtractive.
+    def enterSubtractive(self, ctx:gramaticaParser.SubtractiveContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#Subtractive.
+    def exitSubtractive(self, ctx:gramaticaParser.SubtractiveContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#IdExpr.
+    def enterIdExpr(self, ctx:gramaticaParser.IdExprContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#IdExpr.
+    def exitIdExpr(self, ctx:gramaticaParser.IdExprContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#NumberExpr.
+    def enterNumberExpr(self, ctx:gramaticaParser.NumberExprContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#NumberExpr.
+    def exitNumberExpr(self, ctx:gramaticaParser.NumberExprContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#Modulo.
+    def enterModulo(self, ctx:gramaticaParser.ModuloContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#Modulo.
+    def exitModulo(self, ctx:gramaticaParser.ModuloContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#MatrixOperationExpr.
+    def enterMatrixOperationExpr(self, ctx:gramaticaParser.MatrixOperationExprContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#MatrixOperationExpr.
+    def exitMatrixOperationExpr(self, ctx:gramaticaParser.MatrixOperationExprContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#Exponentiation.
+    def enterExponentiation(self, ctx:gramaticaParser.ExponentiationContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#Exponentiation.
+    def exitExponentiation(self, ctx:gramaticaParser.ExponentiationContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#Divisional.
+    def enterDivisional(self, ctx:gramaticaParser.DivisionalContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#Divisional.
+    def exitDivisional(self, ctx:gramaticaParser.DivisionalContext):
+        pass
+
+
+    # Enter a parse tree produced by gramaticaParser#Parentheses.
+    def enterParentheses(self, ctx:gramaticaParser.ParenthesesContext):
+        pass
+
+    # Exit a parse tree produced by gramaticaParser#Parentheses.
+    def exitParentheses(self, ctx:gramaticaParser.ParenthesesContext):
         pass
 
 

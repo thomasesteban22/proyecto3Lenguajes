@@ -5,9 +5,6 @@ if "." in __name__:
 else:
     from gramaticaParser import gramaticaParser
 
-import sys
-
-
 # This class defines a complete generic visitor for a parse tree produced by gramaticaParser.
 
 class gramaticaVisitor(ParseTreeVisitor):
@@ -27,78 +24,63 @@ class gramaticaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#functionDef.
-    def visitFunctionDef(self, ctx:gramaticaParser.FunctionDefContext):
+    # Visit a parse tree produced by gramaticaParser#printStatement.
+    def visitPrintStatement(self, ctx:gramaticaParser.PrintStatementContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#ifStatement.
-    def visitIfStatement(self, ctx:gramaticaParser.IfStatementContext):
+    # Visit a parse tree produced by gramaticaParser#Multiplicative.
+    def visitMultiplicative(self, ctx:gramaticaParser.MultiplicativeContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#whileStatement.
-    def visitWhileStatement(self, ctx:gramaticaParser.WhileStatementContext):
+    # Visit a parse tree produced by gramaticaParser#Additive.
+    def visitAdditive(self, ctx:gramaticaParser.AdditiveContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#forStatement.
-    def visitForStatement(self, ctx:gramaticaParser.ForStatementContext):
+    # Visit a parse tree produced by gramaticaParser#FunctionCallExpr.
+    def visitFunctionCallExpr(self, ctx:gramaticaParser.FunctionCallExprContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#plotStatement.
-    def visitPlotStatement(self, ctx:gramaticaParser.PlotStatementContext):
+    # Visit a parse tree produced by gramaticaParser#Subtractive.
+    def visitSubtractive(self, ctx:gramaticaParser.SubtractiveContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#fileOperation.
-    def visitFileOperation(self, ctx:gramaticaParser.FileOperationContext):
+    # Visit a parse tree produced by gramaticaParser#IdExpr.
+    def visitIdExpr(self, ctx:gramaticaParser.IdExprContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#regression.
-    def visitRegression(self, ctx:gramaticaParser.RegressionContext):
+    # Visit a parse tree produced by gramaticaParser#NumberExpr.
+    def visitNumberExpr(self, ctx:gramaticaParser.NumberExprContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#classification.
-    def visitClassification(self, ctx:gramaticaParser.ClassificationContext):
+    # Visit a parse tree produced by gramaticaParser#Modulo.
+    def visitModulo(self, ctx:gramaticaParser.ModuloContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#clustering.
-    def visitClustering(self, ctx:gramaticaParser.ClusteringContext):
+    # Visit a parse tree produced by gramaticaParser#Exponentiation.
+    def visitExponentiation(self, ctx:gramaticaParser.ExponentiationContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by gramaticaParser#expression.
-    def visitExpression(self, ctx:gramaticaParser.ExpressionContext):
+    # Visit a parse tree produced by gramaticaParser#Divisional.
+    def visitDivisional(self, ctx:gramaticaParser.DivisionalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by gramaticaParser#Parentheses.
+    def visitParentheses(self, ctx:gramaticaParser.ParenthesesContext):
         return self.visitChildren(ctx)
 
 
     # Visit a parse tree produced by gramaticaParser#functionCall.
     def visitFunctionCall(self, ctx:gramaticaParser.FunctionCallContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by gramaticaParser#matrixOperation.
-    def visitMatrixOperation(self, ctx:gramaticaParser.MatrixOperationContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by gramaticaParser#matrixRows.
-    def visitMatrixRows(self, ctx:gramaticaParser.MatrixRowsContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by gramaticaParser#matrixRow.
-    def visitMatrixRow(self, ctx:gramaticaParser.MatrixRowContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by gramaticaParser#parameters.
-    def visitParameters(self, ctx:gramaticaParser.ParametersContext):
         return self.visitChildren(ctx)
 
 

@@ -1,0 +1,22 @@
+# Asignación y operaciones aritméticas
+a = 5;
+b = 10;
+c = a + b * 2;
+
+# Funciones y operaciones trigonométricas
+result = sin(c);
+
+# Graficar datos
+plot(a, b, c, result);
+
+# Lectura y escritura de archivos
+write("output.txt");
+
+# Regresión lineal
+linearRegression(a, b);
+
+# Clasificación con perceptrón
+perceptron(data);
+
+# Agrupamiento
+clustering(dataSet);

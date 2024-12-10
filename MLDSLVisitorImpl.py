@@ -271,18 +271,34 @@ class MLDSLVisitorImpl(MLDSLVisitor):
             return 0
 
     def visitPlotStatement(self, ctx):
-        x_var = ctx.ID(0).getText()
-        y_var = ctx.ID(1).getText()
-        x_data = self.getVar(x_var)
-        y_data = self.getVar(y_var)
-        if isinstance(x_data, list) and isinstance(y_data, list):
-            plt.plot(x_data, y_data)
-            plt.savefig("grafica.png")
-            plt.close()
-            print("Gráfica guardada en grafica.png")
-        else:
-            print("Error: Los datos para graficar deben ser listas numéricas.")
-        return None
+        # Obtén las variables desde el contexto
+        data_var = ctx.ID(0).getText()
+        cluster_var = ctx.ID(1).getText()
+
+        # Verifica si las variables existen
+        if data_var not in self.variables or cluster_var not in self.variables:
+            print(f"Error: Variables '{data_var}' o '{cluster_var}' no están definidas.")
+            return
+
+        datos = np.array(self.variables[data_var])
+        modelo = self.variables[cluster_var]
+
+        # Asegúrate de que los datos son válidos para graficar
+        if not isinstance(datos, np.ndarray) or len(datos.shape) != 2 or datos.shape[1] != 2:
+            print("Error: Los datos para graficar deben ser listas numéricas 2D.")
+            return
+
+        centroids = modelo['centroids']
+        labels = modelo['labels']
+
+        # Graficar
+        for i, centroid in enumerate(centroids):
+            plt.scatter(datos[labels == i, 0], datos[labels == i, 1], label=f'Cluster {i}')
+            plt.scatter(centroid[0], centroid[1], c='red', marker='x', s=100, label=f'Centroide {i}')
+
+        plt.legend()
+        plt.title("Clustering")
+        plt.show()
 
     def visitFileOperation(self, ctx):
         op = ctx.getChild(0).getText()

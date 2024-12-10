@@ -27,7 +27,7 @@ def main():
 def repl():
     from antlr4 import InputStream, CommonTokenStream
     visitor = MLDSLVisitorImpl()
-    print("Bienvenido a MLDSL REPL. Escribe 'exit' para salir.")
+    print("exit' para salir.")
     while True:
         try:
             line = input('MLDSL> ')

@@ -1,21 +1,40 @@
-// test_plot_sin.dsl
 
-// Generar más puntos entre 0 y 6.2 (aprox 2*pi)
 
-var X = [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0,
-         1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8,1.9,2.0,
-         2.1,2.2,2.3,2.4,2.5,2.6,2.7,2.8,2.9,3.0,
-         3.1,3.2,3.3,3.4,3.5,3.6,3.7,3.8,3.9,4.0,
-         4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,5.0,
-         5.1,5.2,5.3,5.4,5.5,5.6,5.7,5.8,5.9,6.0];
+pi = 3.141592653589793;
 
-var Y = [
-sin(0), sin(0.1), sin(0.2), sin(0.3), sin(0.4), sin(0.5), sin(0.6), sin(0.7), sin(0.8), sin(0.9), sin(1.0),
-sin(1.1), sin(1.2), sin(1.3), sin(1.4), sin(1.5), sin(1.6), sin(1.7), sin(1.8), sin(1.9), sin(2.0),
-sin(2.1), sin(2.2), sin(2.3), sin(2.4), sin(2.5), sin(2.6), sin(2.7), sin(2.8), sin(2.9), sin(3.0),
-sin(3.1), sin(3.2), sin(3.3), sin(3.4), sin(3.5), sin(3.6), sin(3.7), sin(3.8), sin(3.9), sin(4.0),
-sin(4.1), sin(4.2), sin(4.3), sin(4.4), sin(4.5), sin(4.6), sin(4.7), sin(4.8), sin(4.9), sin(5.0),
-sin(5.1), sin(5.2), sin(5.3), sin(5.4), sin(5.5), sin(5.6), sin(5.7), sin(5.8), sin(5.9), sin(6.0)
-];
 
-plot(X,Y);
+// Definir el rango de valores de X de -2pi a 2pi con un paso de 0.1pi
+X = [-2 * pi, -1.9 * pi, -1.8 * pi, -1.7 * pi, -1.6 * pi,
+         -1.5 * pi, -1.4 * pi, -1.3 * pi, -1.2 * pi, -1.1 * pi,
+         -pi, -0.9 * pi, -0.8 * pi, -0.7 * pi, -0.6 * pi,
+         -0.5 * pi, -0.4 * pi, -0.3 * pi, -0.2 * pi, -0.1 * pi,
+         0, 0.1 * pi, 0.2 * pi, 0.3 * pi, 0.4 * pi, 0.5 * pi,
+         0.6 * pi, 0.7 * pi, 0.8 * pi, 0.9 * pi, pi,
+         1.1 * pi, 1.2 * pi, 1.3 * pi, 1.4 * pi, 1.5 * pi,
+         1.6 * pi, 1.7 * pi, 1.8 * pi, 1.9 * pi, 2 * pi];
+
+// Definir Y_sin como el seno de cada valor de X
+Y_sin = [sin(-2 * pi), sin(-1.9 * pi), sin(-1.8 * pi), sin(-1.7 * pi), sin(-1.6 * pi),
+             sin(-1.5 * pi), sin(-1.4 * pi), sin(-1.3 * pi), sin(-1.2 * pi), sin(-1.1 * pi),
+             sin(-pi), sin(-0.9 * pi), sin(-0.8 * pi), sin(-0.7 * pi), sin(-0.6 * pi),
+             sin(-0.5 * pi), sin(-0.4 * pi), sin(-0.3 * pi), sin(-0.2 * pi), sin(-0.1 * pi),
+             sin(0), sin(0.1 * pi), sin(0.2 * pi), sin(0.3 * pi), sin(0.4 * pi), sin(0.5 * pi),
+             sin(0.6 * pi), sin(0.7 * pi), sin(0.8 * pi), sin(0.9 * pi), sin(pi),
+             sin(1.1 * pi), sin(1.2 * pi), sin(1.3 * pi), sin(1.4 * pi), sin(1.5 * pi),
+             sin(1.6 * pi), sin(1.7 * pi), sin(1.8 * pi), sin(1.9 * pi), sin(2 * pi)];
+
+// Definir Y_cos como el coseno de cada valor de X
+Y_cos = [cos(-2 * pi), cos(-1.9 * pi), cos(-1.8 * pi), cos(-1.7 * pi), cos(-1.6 * pi),
+             cos(-1.5 * pi), cos(-1.4 * pi), cos(-1.3 * pi), cos(-1.2 * pi), cos(-1.1 * pi),
+             cos(-pi), cos(-0.9 * pi), cos(-0.8 * pi), cos(-0.7 * pi), cos(-0.6 * pi),
+             cos(-0.5 * pi), cos(-0.4 * pi), cos(-0.3 * pi), cos(-0.2 * pi), cos(-0.1 * pi),
+             cos(0), cos(0.1 * pi), cos(0.2 * pi), cos(0.3 * pi), cos(0.4 * pi), cos(0.5 * pi),
+             cos(0.6 * pi), cos(0.7 * pi), cos(0.8 * pi), cos(0.9 * pi), cos(pi),
+             cos(1.1 * pi), cos(1.2 * pi), cos(1.3 * pi), cos(1.4 * pi), cos(1.5 * pi),
+             cos(1.6 * pi), cos(1.7 * pi), cos(1.8 * pi), cos(1.9 * pi), cos(2 * pi)];
+
+// Graficar seno con etiqueta
+plot(X, Y_sin, "Seno");
+
+// Graficar coseno con etiqueta
+plot(X, Y_cos, "Coseno");
